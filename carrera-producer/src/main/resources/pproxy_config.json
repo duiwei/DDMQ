@@ -12,7 +12,7 @@
     },
     "cache": {
       "cacheServer": {
-        "addrs": ["10.94.112.77:6379", "10.94.112.78:6379"],
+        "addrs": ["127.0.0.1:6379", "127.0.0.1:6379"],
         "jedisPool": {
           "blockWhenExhausted": false,
           "evictionPolicyClassName": "org.apache.commons.pool2.impl.DefaultEvictionPolicy",
@@ -51,76 +51,6 @@
         "delayTopic": false,
         "produceMode": "SAME_IDC",
         "strongOrder": false,
-        "topic": "BenchmarkTest",
-        "topicUnits": [{
-          "brokerCluster": "R_auto-test",
-          "idc": "gz01",
-          "maxTps": 1000000,
-          "proxies": {},
-          "totalMaxTps": 1024
-        }],
-        "useCache": false
-      }, {
-        "autoBatch": true,
-        "delayTopic": false,
-        "produceMode": "SAME_IDC",
-        "strongOrder": false,
-        "topic": "test-0",
-        "topicUnits": [{
-          "brokerCluster": "R_auto-test",
-          "idc": "gz01",
-          "maxTps": 100,
-          "proxies": {},
-          "totalMaxTps": 1024
-        }],
-        "useCache": false
-      }, {
-        "autoBatch": true,
-        "delayTopic": false,
-        "produceMode": "SAME_IDC",
-        "strongOrder": false,
-        "topic": "test-1",
-        "topicUnits": [{
-          "brokerCluster": "R_auto-test",
-          "idc": "gz01",
-          "maxTps": 100,
-          "proxies": {},
-          "totalMaxTps": 1024
-        }],
-        "useCache": false
-      }, {
-        "autoBatch": true,
-        "delayTopic": false,
-        "produceMode": "SAME_IDC",
-        "strongOrder": false,
-        "topic": "test-2",
-        "topicUnits": [{
-          "brokerCluster": "R_auto-test",
-          "idc": "gz01",
-          "maxTps": 100,
-          "proxies": {},
-          "totalMaxTps": 1024
-        }],
-        "useCache": false
-      }, {
-        "autoBatch": true,
-        "delayTopic": false,
-        "produceMode": "SAME_IDC",
-        "strongOrder": false,
-        "topic": "test-3",
-        "topicUnits": [{
-          "brokerCluster": "R_auto-test",
-          "idc": "gz01",
-          "maxTps": 100,
-          "proxies": {},
-          "totalMaxTps": 1024
-        }],
-        "useCache": false
-      },{
-        "autoBatch": true,
-        "delayTopic": false,
-        "produceMode": "SAME_IDC",
-        "strongOrder": false,
         "topic": "TestTopic3",
         "topicUnits": [{
           "brokerCluster": "R_auto-test",
@@ -155,8 +85,7 @@
         "groupPrefix": "carrera_rocketmq_producer_",
         "heartbeatBrokerInterval": 10000,
         "maxMessageSize": 2097152,
-        "namesrvAddrs": ["10.179.53.57:9876", "10.179.53.151:9876"],
-//        "namesrvAddrs": ["127.0.0.1:9876"],
+        "namesrvAddrs": ["127.0.0.1:9876", "127.0.0.1:9876"],
         "persistConsumerOffsetInterval": 5000,
         "pollNameServerInterval": 2000,
         "retryAnotherBrokerWhenNotStoreOK": false,
@@ -188,6 +117,6 @@
   "idc": "gz01",
   "instance": "127.0.0.1:9613",
   "proxyCluster": "P_kafka_test",
-  "topics": ["jxl_autotest", "test-mq-tyy-04", "test-mq-tyy01", "config_update", "test-mq-tyy-08", "test-mq-tyy-06", "order_level2status_topic", "sd_test_autotest", "test_zhc_disf_2", "newZk", "test-mq-tyy02","TestTopic3"]
+  "topics": ["TestTopic3"]
 }
 
