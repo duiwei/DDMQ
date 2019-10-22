@@ -2,7 +2,7 @@
 MAINCLASS=com.xiaojukeji.carrera.pproxy.proxy.ProducerProxyMain
 PROXY_VERSION=1.0.0-SNAPSHOT
 CONTROL_LOG="logs/control.log"
-
+IS_LOCAL_FILE_MODE=true
 function start() {
     OLD_PID="`pgrep -f ${MAINCLASS}`"
     if [ "$OLD_PID" ]; then
@@ -51,6 +51,11 @@ function start() {
     JAVA_OPTS="${JAVA_OPTS} -Dlog4j.configurationFile=file://${PROXY_HOME}/conf/log4j2.xml"
     JAVA_OPTS="${JAVA_OPTS} -Drocketmq.client.log.loadconfig=false"
     JAVA_OPTS="${JAVA_OPTS} -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector"
+
+    if [ $IS_LOCAL_FILE_MODE == true ]; then
+       JAVA_OPTS="${JAVA_OPTS} -Dcom.xiaojukeji.carrera.config.isConfigLocalMode=true"
+       CARRERA_CONFIG="${PROXY_HOME}/conf/pproxy_config.json"
+    fi
 
     CLASSPATH="${PROXY_HOME}/carrera-producer-${PROXY_VERSION}-jar-with-dependencies.jar":${CLASSPATH}
 
