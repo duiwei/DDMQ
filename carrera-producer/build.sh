@@ -22,4 +22,4 @@ cp control.sh ${OUTPATH}/
 cp src/main/resources/carrera.yaml ${OUTPATH}/conf/
 cp src/main/resources/log4j2.xml ${OUTPATH}/conf/
 cp src/main/resources/pproxy_config.json ${OUTPATH}/conf/
-cp target/carrera-producer-1.0.0-SNAPSHOT-jar-with-dependencies.jar ${OUTPATH}/
+cp target/carrera-producer-1.1.0-KFK-SNAPSHOT-jar-with-dependencies.jar ${OUTPATH}/

@@ -51,12 +51,12 @@
         "delayTopic": false,
         "produceMode": "SAME_IDC",
         "strongOrder": false,
-        "topic": "TestTopic3",
+        "topic": "publiclog",
         "topicUnits": [{
           "brokerCluster": "R_auto-test",
           "idc": "gz01",
           "maxTps": 1000,
-          "proxies": {"P_kafka_test":["127.0.0.1:9092","127.0.0.1:9092"]},
+          "proxies": {"P_kafka_test":["192.168.1.9:9092"]},
           "totalMaxTps": 1000
         }],
         "useCache": false
@@ -85,7 +85,7 @@
         "groupPrefix": "carrera_rocketmq_producer_",
         "heartbeatBrokerInterval": 10000,
         "maxMessageSize": 2097152,
-        "namesrvAddrs": ["127.0.0.1:9876", "127.0.0.1:9876"],
+        "namesrvAddrs": ["127.0.0.1:9876"],
         "persistConsumerOffsetInterval": 5000,
         "pollNameServerInterval": 2000,
         "retryAnotherBrokerWhenNotStoreOK": false,
@@ -99,7 +99,7 @@
       "backlog": 50,
       "clientTimeout": 0,
       "maxReadBufferBytes": 5000000,
-      "port": 9613,
+      "port": 9614,
       "selectorThreads": 8,
       "timeoutCheckerThreads": 3,
       "workerQueueSize": 20000,
@@ -115,8 +115,7 @@
     "warmUpFetchTopicRouteInfo": true
   },
   "idc": "gz01",
-  "instance": "127.0.0.1:9613",
+  "instance": "127.0.0.1:9614",
   "proxyCluster": "P_kafka_test",
-  "topics": ["TestTopic3"]
+  "topics": ["publiclog"]
 }
-
