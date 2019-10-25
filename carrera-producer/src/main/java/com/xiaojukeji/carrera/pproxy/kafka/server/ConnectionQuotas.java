@@ -4,9 +4,6 @@ import java.net.InetAddress;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class ConnectionQuotas {//todo 连接统计
     private Map<InetAddress,Integer> counts = new ConcurrentHashMap();
 

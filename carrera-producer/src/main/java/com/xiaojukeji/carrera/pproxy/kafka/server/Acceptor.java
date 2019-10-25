@@ -18,9 +18,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 import static java.lang.String.format;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class Acceptor extends AbstractServerThread {
 
     private Selector nioSelector;

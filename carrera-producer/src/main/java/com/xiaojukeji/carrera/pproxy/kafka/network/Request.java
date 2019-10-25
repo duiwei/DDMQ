@@ -7,9 +7,6 @@ import org.apache.kafka.common.requests.RequestHeader;
 
 import java.nio.ByteBuffer;
 
-/**
- * Created by lybuestc on 2019/4/11
- */
 public class Request extends BaseRequest {
 
     private int processor;

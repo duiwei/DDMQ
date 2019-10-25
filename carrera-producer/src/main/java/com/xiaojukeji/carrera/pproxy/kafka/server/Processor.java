@@ -27,9 +27,6 @@ import java.util.concurrent.LinkedBlockingDeque;
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 import static java.lang.String.format;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class Processor extends AbstractServerThread{
     private int id;
     private Queue<SocketChannel> newConnections = new ConcurrentLinkedQueue();

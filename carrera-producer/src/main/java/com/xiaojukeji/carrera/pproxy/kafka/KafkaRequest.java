@@ -4,9 +4,6 @@ import com.xiaojukeji.carrera.thrift.Message;
 import com.xiaojukeji.carrera.pproxy.producer.*;
 import org.apache.rocketmq.client.producer.SendResult;
 import java.util.function.Consumer;
-/**
- * Created by lybuestc on 2019/4/25
- */
 public class KafkaRequest extends CarreraRequest implements Runnable{
 
     Consumer callable;

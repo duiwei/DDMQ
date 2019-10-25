@@ -14,9 +14,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by lybuestc on 2019/9/22
- */
 public class QueueToPartitionManager {
 
     private Map<String/*topic*/,Map<String/*qid*/, Integer/*partition*/>> qidToPartitionMap = new ConcurrentHashMap<>();//todo future 需要用持久化的映射代替

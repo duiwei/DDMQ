@@ -3,9 +3,6 @@ package com.xiaojukeji.carrera.pproxy.kafka.network;
 import org.apache.kafka.common.network.Send;
 import org.apache.kafka.common.utils.Time;
 
-/**
- * Created by lybuestc on 2019/4/11
- */
 public abstract class Response {
     private Request request;
     private int processor;

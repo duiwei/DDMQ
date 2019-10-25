@@ -10,9 +10,6 @@ import com.xiaojukeji.carrera.pproxy.server.ProducerAsyncServerImpl;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * Created by lybuestc on 2019/4/12
- */
 public class KafkaAdapterServer {
 
     private KafkaConfig kafkaConfig;

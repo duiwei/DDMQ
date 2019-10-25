@@ -4,9 +4,6 @@ import org.apache.kafka.common.network.ListenerName;
 import org.apache.kafka.common.security.auth.SecurityProtocol;
 import org.apache.kafka.common.utils.Utils;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class EndPoint {
 
     String connectionString;

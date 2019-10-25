@@ -3,9 +3,6 @@ package com.xiaojukeji.carrera.pproxy.kafka;
 import com.xiaojukeji.carrera.pproxy.producer.ProxySendResult;
 import org.apache.rocketmq.client.producer.SendResult;
 
-/**
- * Created by lybuestc on 2019/9/26
- */
 public class KafkaSendResult {
     ProxySendResult proxySendResult;
     SendResult sendResult;

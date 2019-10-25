@@ -23,9 +23,6 @@ import java.util.function.Consumer;
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 import static org.apache.kafka.common.record.RecordVersion.V2;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class KafkaApis {
 
     private RequestChannel requestChannel;

@@ -18,9 +18,6 @@ import java.util.function.Consumer;
 
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 
-/**
- * Created by lybuestc on 2019/4/17
- */
 public class ProducerAdapterService <T> {
 
     ProducerPool producerPool;

@@ -6,9 +6,6 @@ import org.apache.kafka.common.requests.FindCoordinatorResponse;
 
 import java.util.function.Consumer;
 
-/**
- * Created by lybuestc on 2019/4/18
- */
 public class CoordinatorAdapterService {
 
     public FindCoordinatorResponse createFindCoordinatorResponse() {

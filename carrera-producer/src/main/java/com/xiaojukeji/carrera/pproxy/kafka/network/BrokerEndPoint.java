@@ -1,8 +1,5 @@
 package com.xiaojukeji.carrera.pproxy.kafka.network;
 
-/**
- * Created by lybuestc on 2019/4/16
- */
 public class BrokerEndPoint {
 
     public BrokerEndPoint() {

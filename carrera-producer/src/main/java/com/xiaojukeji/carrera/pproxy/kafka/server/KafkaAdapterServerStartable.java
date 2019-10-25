@@ -9,9 +9,6 @@ import com.xiaojukeji.carrera.pproxy.server.ProducerAsyncServerImpl;
 
 import java.util.concurrent.CountDownLatch;
 
-/**
- * Created by lybuestc on 2019/4/12
- */
 public class KafkaAdapterServerStartable {
 
     private KafkaAdapterServer kafkaAdapterServer;

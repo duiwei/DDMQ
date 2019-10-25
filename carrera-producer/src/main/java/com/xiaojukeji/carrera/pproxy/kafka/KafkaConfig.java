@@ -6,9 +6,6 @@ import org.apache.kafka.common.config.ConfigDef;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class KafkaConfig extends AbstractConfig{
     private int numNetworkThreads = 10;
     private int numIoThreads = 1;
