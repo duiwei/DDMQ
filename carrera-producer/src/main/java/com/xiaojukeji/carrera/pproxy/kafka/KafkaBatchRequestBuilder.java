@@ -17,10 +17,6 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.function.Consumer;
 
-/**
- * 真正对接生产环境时可以改成batch发送方式，需要broker支持返回batch信息(carrera针对batch做过改造，支持了batch发送不同topic的消息,但没返回offset信息)
- * Created by lybuestc on 2019/4/27
- */
 public class KafkaBatchRequestBuilder<T> {
 
     private ProducerPool producerPool;

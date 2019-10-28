@@ -14,9 +14,6 @@ import java.util.function.Consumer;
 import static org.apache.kafka.common.record.RecordBatch.MAGIC_VALUE_V1;
 import static org.apache.kafka.common.record.RecordBatch.MAGIC_VALUE_V2;
 
-/**
- * Created by lybuestc on 2019/4/17
- */
 public class FetchAdapterService {
 
     long baseOffset = 0;//todo offset如果重复，client就过滤掉了。使用真实的offset

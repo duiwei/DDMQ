@@ -9,9 +9,6 @@ import java.util.concurrent.CountDownLatch;
 
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 
-/**
- * Created by lybuestc on 2019/4/9
- */
 public class KafkaRequestHandler implements Runnable{
 
     private volatile  boolean stopped = false;

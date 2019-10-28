@@ -6,10 +6,6 @@ import org.apache.kafka.common.TopicPartition;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * group信息，包括加入group的ip, 消费的offset
- * Created by lybuestc on 2019/4/24
- */
 public class GroupMetadata {
     private Map<String,MemberMetadata> members = new ConcurrentHashMap<>();//这些结合cproxy来定，可以直接查看cproxy的ip
     private Map<TopicPartition, OffsetAndMetadata> offsets = new ConcurrentHashMap<>();

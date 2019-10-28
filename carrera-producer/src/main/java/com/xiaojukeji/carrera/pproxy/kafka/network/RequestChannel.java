@@ -9,9 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class RequestChannel {
 
     private ArrayBlockingQueue<BaseRequest> requestQueue;

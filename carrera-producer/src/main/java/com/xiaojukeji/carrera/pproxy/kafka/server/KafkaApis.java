@@ -1,5 +1,6 @@
 package com.xiaojukeji.carrera.pproxy.kafka.server;
 
+import com.xiaojukeji.carrera.config.v4.PProxyConfig;
 import com.xiaojukeji.carrera.config.v4.pproxy.RocketmqConfiguration;
 import com.xiaojukeji.carrera.pproxy.kafka.QueueToPartitionManager;
 import com.xiaojukeji.carrera.pproxy.kafka.network.*;
@@ -7,12 +8,14 @@ import com.xiaojukeji.carrera.pproxy.producer.ConfigManager;
 import com.xiaojukeji.carrera.pproxy.producer.ProducerPool;
 import com.xiaojukeji.carrera.pproxy.producer.TopicConfigManager;
 import com.xiaojukeji.carrera.pproxy.server.ProducerAsyncServerImpl;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.kafka.common.Node;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.network.Send;
 import org.apache.kafka.common.protocol.Errors;
 import org.apache.kafka.common.record.MemoryRecords;
 import org.apache.kafka.common.requests.*;
+
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -20,9 +23,6 @@ import java.util.function.Consumer;
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 import static org.apache.kafka.common.record.RecordVersion.V2;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class KafkaApis {
 
     private RequestChannel requestChannel;
@@ -37,6 +37,8 @@ public class KafkaApis {
 
     private TopicConfigManager topicConfigManager;
 
+    private PProxyConfig proxyConfig;
+
     public KafkaApis(RequestChannel requestChannel, ProducerPool producerPool, ProducerAsyncServerImpl serverImpl, ConfigManager configManager) {
         this.requestChannel = requestChannel;
         this.producerAdapterService = new ProducerAdapterService(producerPool,serverImpl);
@@ -46,6 +48,7 @@ public class KafkaApis {
         Map<String, RocketmqConfiguration> rocketmqConfigurationMap = configManager.getProxyConfig().getCarreraConfiguration().getRocketmqConfigurationMap();
         queueToPartitionManager = new QueueToPartitionManager(clusterName, rocketmqConfigurationMap);
         topicConfigManager = configManager.getTopicConfigManager();
+        proxyConfig = configManager.getProxyConfig();
     }
 
     public void handle(Request request) {
@@ -350,8 +353,15 @@ public class KafkaApis {
             List<Node> brokerList = null;//todo 本该是所有broker的列表,暂时只支持所有topic使用相同的proxy ip list
 
             for(String topic: topics) {
-
-                List<Address> proxyAddress  = topicConfigManager.getProxyIpList(topic);
+                List<Address> proxyAddress = new ArrayList<>();
+                if (!CollectionUtils.isEmpty(proxyConfig.getCarreraConfiguration().getKafkaAdapterVip())) {
+                    for (String ipPortStr : proxyConfig.getCarreraConfiguration().getKafkaAdapterVip()) {
+                        String[] addressArray = ipPortStr.split(":");
+                        proxyAddress.add(new Address(addressArray[0], new Integer(addressArray[1])));
+                    }
+                } else {
+                    proxyAddress = topicConfigManager.getProxyIpList(topic);
+                }
                 Collections.sort(proxyAddress);
                 List<Node> nodeList = new ArrayList<>();
                 Integer proxyId = 0;

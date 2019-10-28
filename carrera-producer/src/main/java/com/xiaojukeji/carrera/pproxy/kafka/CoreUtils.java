@@ -6,9 +6,6 @@ import java.io.Closeable;
 
 import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 
-/**
- * Created by lybuestc on 2019/4/11
- */
 public class CoreUtils {
 
     public static void close (Closeable closeable) {

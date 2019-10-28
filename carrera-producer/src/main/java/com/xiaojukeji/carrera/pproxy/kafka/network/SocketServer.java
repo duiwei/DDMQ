@@ -16,9 +16,6 @@ import static com.xiaojukeji.carrera.pproxy.kafka.LoggerUtils.KafkaAdapterLog;
 import static java.lang.String.format;
 import static org.apache.kafka.common.security.auth.SecurityProtocol.PLAINTEXT;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public class SocketServer {
 
     private int maxQueuedRequests = 10000;

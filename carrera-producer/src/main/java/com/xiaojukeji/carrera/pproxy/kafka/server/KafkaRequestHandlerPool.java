@@ -7,9 +7,6 @@ import org.apache.kafka.common.utils.KafkaThread;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by lybuestc on 2019/4/15
- */
 public class KafkaRequestHandlerPool {
 
     private List<KafkaRequestHandler> runnables;

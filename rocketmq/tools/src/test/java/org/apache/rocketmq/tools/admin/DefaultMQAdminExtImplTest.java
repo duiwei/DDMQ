@@ -37,9 +37,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by JiangHaiting@didichuxing.com on 2017/11/30.
- */
 public class DefaultMQAdminExtImplTest {
     private DefaultMQAdminExt mqAdmin;
 

@@ -97,7 +97,7 @@ public class TopicInMgmtConfig {
         for(TopicConfiguration topicConfiguration : clusterConfig.values()) {
             Map<String, Set<String>> proxies = topicConfiguration.getProxies();
             for (Set<String> proxy : proxies.values()) {
-                for (String ipPort :proxy) {
+                for (String ipPort : proxy) {
                     String[] addressArray = ipPort.trim().split(":");
                     allProxyIpList.add(new Address(addressArray[0], new Integer(addressArray[1])));
                 }
@@ -105,7 +105,6 @@ public class TopicInMgmtConfig {
         }
         return allProxyIpList;
     }
-
 
     public boolean hasCluster(){
         return !clusterConfig.isEmpty();

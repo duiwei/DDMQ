@@ -7,9 +7,6 @@ import java.nio.channels.SocketChannel;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * Created by lybuestc on 2019/4/10
- */
 public abstract class AbstractServerThread implements Runnable {
 
     public ConnectionQuotas connectionQuotas;

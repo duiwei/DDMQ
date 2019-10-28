@@ -2,9 +2,6 @@ package com.xiaojukeji.carrera.pproxy.kafka.network;
 
 import org.apache.kafka.common.network.Send;
 
-/**
- * Created by lybuestc on 2019/4/11
- */
 public class SendResponse extends Response{
 
     private Send send;

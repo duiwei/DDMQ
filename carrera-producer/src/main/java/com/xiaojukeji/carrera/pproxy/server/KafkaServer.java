@@ -5,9 +5,6 @@ import com.xiaojukeji.carrera.pproxy.kafka.server.KafkaAdapterServerStartable;
 import com.xiaojukeji.carrera.pproxy.producer.ConfigManager;
 import com.xiaojukeji.carrera.pproxy.producer.ProducerPool;
 
-/**
- * Created by lybuestc on 2019/10/21
- */
 public class KafkaServer implements Server{
 
     KafkaAdapterServerStartable kafkaAdapterServerStartable;
